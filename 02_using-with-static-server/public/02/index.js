@@ -3,14 +3,9 @@ class SampleElement extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = `
-<div>
-    <h1>Sample Component</h1>
-    <p>
-        CustomElements v1のサンプル
-    </p>
-    <button>sample</button>
-</div>`;
+        const template = document.querySelector('#sample-element-template');
+        const instance = template.content.cloneNode(true);
+        this.appendChild(instance);
     }
 }
 
