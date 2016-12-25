@@ -2,8 +2,6 @@
 class StopwatchElement extends HTMLElement {
     constructor() {
         super();
-        this.importDoc = document.currentScript.ownerDocument;
-
         this.baseTime = null;
         this.offset = null;
         this.timerId = null;
